@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-5</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних чи непарних.</h3>		
+ 	</div>
+	<script>		
+	let evenNumber = 0
+		let oddNumber = 0
+		for (let i = 0; i < 100; i++) {			
+			const rundomNums = 1+ Math.floor(Math.random() * 1000)			
+			if(rundomNums%2 === 0)
+			evenNumber++	
+		   else 
+			oddNumber++
+		}
+		if (evenNumber > oddNumber)
+		document.write(`парных чисел больше`)
+	   else
+	   document.write(`непарных чисел больше`)
+
+	</script>
+</body>
+</html>

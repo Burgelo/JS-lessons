@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-2</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Інвестор вклав S тис. грн на 20 років під 20% річних. Визначити за допомогою циклів суму, яку він одержить (без оподаткування)</h3>		
+ 	</div>
+	<script>		
+			let userTotalSum = 0
+		const userSum = parseFloat(prompt(`Ведіть суму вкладу (грн)`))						
+		for(numYear=1; numYear<= 20; numYear++) {
+			const profit = 0.2						
+			let userTotalSumYear =userSum + userSum * 0.2 
+			userTotalSum= userTotalSum + userTotalSumYear 								
+		}	
+			document.write(`Сума вкладу, включаючи 20% годових складає ${userTotalSum.toFixed(2)} грн.`)
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task-7</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим фіксованим повідомленням).</h3>	
+	</div>
+	<script>
+	function getTable(numRow, numColumn, message) {
+		let table
+		for (let i = 0; i < numRow; i++) {
+			for (let c = 0; c < numColumn; c++) {}				
+			}
+		return table
+	}
+	const numRow = parseInt(prompt("Введіть кількість рядків"))
+	const numColumn = parseInt(prompt("Введіть кількість колонок"))
+	let message = prompt("Напишіть повідомлення")
+	let table = getTable(numRow, numColumn, message)
+	document.write(`<table border="2px">`)
+			for (let i = 0; i < numRow; i++) {
+				document.write(`<tr>`)
+					for (let c = 0; c < numColumn; c++) {
+						document.write(`<td>${message}<td>`)						
+					}
+				document.write(`</tr>`)
+			}
+		document.write(`</table>`)
+	</script>
+</body>
+</html>

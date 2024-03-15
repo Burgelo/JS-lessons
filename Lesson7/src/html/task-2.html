@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-2</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Створити функцію, яка за номером місяця повертає його назву.</h3>		
+ 	</div>
+	<script>		
+			function getTimeOfYear(monthNum) {				
+			let monthOfYear	
+			switch (monthNum) {				
+				case 1: monthOfYear = `Січень`
+				break;
+				case 2: monthOfYear = `Лютий`					
+				break;
+			   case 3: monthOfYear = `Березень`
+				break;
+				case 4: monthOfYear = `Квітень`
+				break;
+				case 5: monthOfYear = `Травень`				
+				break;
+				case 6: monthOfYear = `Червень`
+				break;
+				case 7: monthOfYear = `Липень`
+				break;
+				case 8: monthOfYear = `Серпень`						
+				break;
+				case 9: monthOfYear = `Вересень`
+				break;
+				case 10: monthOfYear = `Жовтень`
+				break;
+				case 11:	monthOfYear = `Листопад`				
+				break;
+				case 12: monthOfYear = `Грудень`
+				break;
+				default: monthOfYear = `Такого місяца не існує`				
+				break;
+			}
+			return monthOfYear
+			
+	   }
+		let monthNum = parseInt(prompt("Введіть номер місяця"))
+		document.write(`${monthNum} = ${getTimeOfYear(monthNum)}`)	
+	</script>
+</body>
+</html>

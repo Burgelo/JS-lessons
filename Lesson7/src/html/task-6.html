@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-6</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Створити окремі функції, які переводять:</h3>	
+			<p>Сантиметри у дюйми;</p>
+		   <p>Кілограми у фунти;</p>
+		   <p>Кілометри у милі.</p>	
+ 	</div>
+	<script>
+		function getCm(numCm,cm = 0.1 ) {
+			return  numCm * cm
+	   }
+	   function getKg(numKg, kg = 0.2046) {
+		   return  numKg * kg
+	   }
+	   function getKm(numKm, km = 0.62137) {
+			return  numKm * km
+	}
+	let numCm = parseFloat(prompt("Введіть число (см)"))
+	let numKg = parseFloat(prompt("Введіть число (Кг)"))
+	let numKm= parseFloat(prompt("Введіть число (Км)"))
+	let totalDm = getCm(numCm,0.1 )
+	let totalLb = getKg(numKg,0.2046)
+	let totalMl = getKm(numKm, 0.62137)
+	document.write(`${numCm} сантиметрів = ${totalDm.toFixed(2)} дюйм<br>`)
+	document.write(`${numKg} кілограмів = ${totalLb.toFixed(2)} фунтів<br>`)
+	document.write(`${numKm} кілометрів = ${totalMl.toFixed(2)} миль`)
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-4</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Створити окремі функції, які для 4 чисел знаходять:</h3>
+			<p>1)суму;</p>
+			<p>2)добуток;</p>
+			<p>3)середнє арифметичне;</p>
+			<p>4)мінімальне значення.</p>			
+ 	</div>
+	<script>
+		function getSum(num1, num2, num3, num4) {
+			let sum = num1 + num2 + num3 + num4
+			return sum
+		} 
+		function getMultiplication(num1, num2, num3, num4) {
+			let mult = num1 * num2 * num3 * num4
+			return mult
+		} 
+      function getMathMean(num1, num2, num3, num4) {
+			let mathMean = (num1 + num2 + num3 + num4) / 4
+			return mathMean
+		} 
+		function getNumMin(num1, num2, num3, num4) {
+			let minNum
+			if(num1<=num2 && num1<=num3 && num1<=num1) {
+				minNum = num1
+			}
+			else if(num2<=num1 && num2<=num3 && num1<=num1) {
+				minNum = num2
+			}
+			else if(num3<=num1 && num3<=num2 && num3<=num4) {
+				minNum = num3
+			}
+			else if(num4<=num1 && num4<=num2 && num4<=num3) {
+				minNum = num4
+			}
+			return  minNum
+		}
+		let num1 = parseInt(prompt("Введіть перше число"))	
+		let num2 = parseInt(prompt("Введіть друге число"))	
+		let num3 = parseInt(prompt("Введіть третє число"))	
+		let num4 = parseInt(prompt("Введіть четверте число"))			
+		
+		document.write(`Сума чисел = ${getSum(num1, num2, num3, num4)}<br>`)
+		document.write(`Додаток чисел = ${getMultiplication(num1, num2, num3, num4)}<br>`)
+		document.write(`Середнє арифметичне = ${getMathMean(num1, num2, num3, num4)}<br>`)
+		document.write(`Мінімальне число = ${getNumMin(num1, num2, num3, num4)}`)
+	</script>
+</body>
+</html>

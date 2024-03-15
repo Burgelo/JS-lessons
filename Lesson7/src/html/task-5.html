@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-5</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title"> Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.</h3>		
+ 	</div>
+	<script>		
+let getEvenNum = function(num1, num2, num3){
+			let evenNum = 0
+		   if(num1 %2 ===0) evenNum++
+			if(num2 %2 ===0) evenNum++
+			if(num3 %2 ===0) evenNum++
+		   return evenNum
+		}		   
+		let getPositiveNum = function(num1, num2, num3) {
+			let positiveNum = 0
+		   if(num1 > 0) positiveNum++
+			if(num2 > 0) positiveNum++
+			if(num3 > 0) positiveNum++
+		   return positiveNum
+		}		   
+		let getMoreThanHungred = function(num1, num2, num3) {
+			let moreThanHungred = 0
+		   if(num1 > 100) moreThanHungred++
+		   if(num2 > 100) moreThanHungred++
+			if(num3 > 100) moreThanHungred++
+		   return moreThanHungred
+		}
+			
+		let num1 = parseFloat(prompt(`Введіть число `))		
+		let num2 = parseFloat(prompt(`Введіть число `))	
+		let num3 = parseFloat(prompt(`Введіть число `))			
+			
+		let result1 = getEvenNum(num1, num2, num3)
+		let result2 = getPositiveNum(num1, num2, num3)
+		let result3 = getMoreThanHungred(num1, num2, num3)
+		document.write(`Цифри, які Ві ввели = ${num1}, ${num2}, ${num3}<br>`)
+		document.write(`Кількість парних = ${result1}<br>`)
+		document.write(`Кількість додатних = ${result2}<br>`)
+      document.write(`Кількість більших за 100 = ${result3}`)
+
+	</script>
+</body>
+</html>

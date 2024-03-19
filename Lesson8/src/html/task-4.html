@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-4</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Задача 5. Дано послідовність оцінок учня. Підрахувати кількість:</h3>
+		<p>1)	двійок</p>
+		<p>2)	кількість хороших оцінок (добре, відмінно);</p>
+		<p>3)	кількість оцінок, які нижче середнього.</p>				
+ 	</div>
+	<script>
+		let velue =[4, 5, 3, 2, 4, 5, 3, 4, 5, 2, 5, 5]
+function isVelueTwo(velue) {
+	t = 0
+	for (let i = 0; i < velue.length; i++) {
+		if (velue[i] === 2) t++		
+	}
+	return t
+}
+function isGoodVelue(velue) {
+	g = 0
+	for (let i = 0; i < velue.length; i++) {
+		if (velue[i] >= 4) g++		
+	}
+	return g
+}
+function isbadVelue(velue) {
+	b = 0
+	for (let i = 0; i < velue.length; i++) {
+		if (velue[i] <= 3) b++		
+	}
+	return b
+}
+document.write(`послідовність оцінок учня = 4, 5, 3, 2, 4, 5, 3, 4, 5, 2, 5, 5<br>`)
+document.write(`кількість двійок = ${isVelueTwo(velue)}<br>`)
+document.write(`кількість хороших оцінок (добре, відмінно) = ${isGoodVelue(velue)}<br>`)
+document.write(`кількість оцінок, які нижче середнього = ${isbadVelue(velue)}<br>`)
+      
+	</script>
+</body>
+</html>

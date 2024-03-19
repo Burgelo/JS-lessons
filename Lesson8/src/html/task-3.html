@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-3</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».</h3>
+		<p>'Olga','Olena','Ivan','Mikola','Petro','Ivan','Zahar'</p>		
+ 	</div>
+	<script>
+			let userName = ['Olga','Olena','Ivan','Mikola','Petro','Ivan','Zahar']
+         function isNameIvan(userName) {
+	      c = 0
+	      for (let i = 0; i < userName.length; i++) {
+		   if(userName[i] === 'Ivan') c++		
+	      }
+	      return c
+         }
+         document.write(`ім’я «Іван» зустрічається ${isNameIvan(userName)}`)
+	</script>
+</body>
+</html>

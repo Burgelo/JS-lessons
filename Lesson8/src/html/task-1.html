@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-1</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).
+		</h3>		
+ 	</div>
+	<script>	
+		function getAverageVelueSabject(numberSubjects,...listVelue){			
+			s = 0
+			for (let index = 0; index < numberSubjects; index++) {
+				s+= listVelue [index]				
+			}
+			return s/numberSubjects
+		}
+		let averageValue = getAverageVelueSabject(5,3, 4, 5, 4, 5, 3)
+		document.write(`середній бал = ${averageValue}<br>`)
+		function categoryStudent(averageValue){
+			let category
+			if (averageValue<3) {
+				category = `двійочник`
+			}
+			else if (averageValue<4) {
+				category = `трійочник`
+			}
+			else if (averageValue<5) {
+				category = `хорошист`
+			}
+			else if (averageValue===5) {
+				category = `відмінник`
+			}
+			return category
+		}
+		let category = categoryStudent(averageValue)
+		document.write(`${category}`)
+	</script>
+</body>
+</html>

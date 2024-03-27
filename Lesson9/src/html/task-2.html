@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-2</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями, а друга заповнена 7-ками.</h3>				
+ 	</div>
+	<script>	
+	let numbersElement = parseInt(prompt("Ввевшеь кількість елементів у масиві"))
+	let lengthtHalf = Math.round(numbersElement/2)		
+   let newArr = new Array(numbersElement).fill(1, 0, lengthtHalf).fill(7, lengthtHalf)	      
+		document.write(newArr)		
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task-10</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого податку у грн.
+			</h3>
+		<p>[120, 343, 540, 1230, 54, 456, 2000]</p>				
+ 	</div>
+	<script>			
+		let prices = [120,600, 540, 1230, 80, 450, 2000]
+		const tax = 0.2
+		let taxFromPrices = prices.map(
+			(prices)=> prices * tax
+		)
+		let sum = prices.reduce(
+			(prevSum, price) => (prevSum + price), 0
+		)
+		let totalTaxes = sum * tax
+		document.write(`${taxFromPrices}<br>`)
+		document.write(`Загальна сума податку складає ${totalTaxes}`)
+		// document.write(totalTaxes)	
+	</script>
+</body>
+</html>

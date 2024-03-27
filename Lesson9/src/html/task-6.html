@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-6</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Дано масив елементів. Усі елементи, які більші за перший елемент помножити на 2</h3>
+		<p>[22, 33,10, 15, 45, 23, 8, 10]</p>				
+ 	</div>
+	<script>	
+	const arr = [22, 33,10, 15, 45, 23, 8, 10]		
+		arr.forEach((element, index, baseArr)=>{
+			if(element > baseArr[0]) baseArr[index]*=2
+		})
+		document.write(arr)		
+	</script>	
+</body>
+</html>

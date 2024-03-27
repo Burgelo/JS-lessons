@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-5</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Дано масив елементів. Знайти добуток додатних елементів</h3>
+		<p>[-10, 15, 2, -3, 6]</p>				
+ 	</div>
+	<script>	
+	const arr = [-10, 15, 2, -3, 6]
+		let sum = 0
+		for(let element of arr){
+			if(element > 0) sum += element
+		}
+		document.write(`Sum = ${sum}`)	
+	</script>
+</body>
+</html>

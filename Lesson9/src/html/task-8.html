@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task-8</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»
+			</h3>
+		<p>[A809ВР, Х955УН, У977ВЕ, Х308УН, М575МС, C033ОМ, У426МА, В572АО, A141ВО, О242УО]</p>				
+ 	</div>
+	<script>	
+	let carsNambersList = ['A809ВР', 'Х955УН', 'У977ВЕ', 'Х308УН', 'М575МС', 'C033ОМ', 'У426МА', 'В572АО', 'A141ВО', 'О242УО']
+		let firstLetterOfCar = 'A'
+		let carsStartA = carsNambersList.filter(
+			(number)=>firstLetterOfCar.includes(number[0])
+		)
+		document.write(`${carsStartA}`)		
+	</script>
+</body>
+</html>

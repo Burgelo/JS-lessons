@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>task-1</title>
+</head>
+<body>
+	<div class="task__blok">
+		<h3 class="task__title">Задача. Дано історію цін на цінні папери за деякий період (згенерувати від 1 до 10000)
+		</h3>		
+ 	</div>
+	<script>	
+		//   1)Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.*/		
+		let pricesSecuritiesList = []
+		let numberPrices = parseInt(prompt('Введіть кількість цінних паперів'))
+		for (let i = 0; i < numberPrices; i++) {
+			pricesSecuritiesList.push(1 + Math.floor(Math.random() * 10000))			
+		}
+		let pricesSecuritiesMore1000 = pricesSecuritiesList.filter(
+			(price) => price>1000 
+		)
+		document.write(`Сгенерований масив цінних паперів <br> ${pricesSecuritiesList}<br>`)		
+		document.write(`1. Масив цінних паперів більших за 1000 <br> ${pricesSecuritiesMore1000}<br> `)
+		// 2)Сформувати новий масив, у якому є номери тільки тих, що більші за 1000 грн.
+      let indexPriceMore1000 = pricesSecuritiesList.reduce(
+			(prevArr, price, index)=> (price > 1000? [...prevArr, index +1] : prevArr),[]
+		)		
+		document.write(`2. Масив, у якому є номери тільки тих, що більші за 1000 грн<br> ${indexPriceMore1000}<br>`)
+		// 3)Сформувати список з тих цін, які більші за попереднє значення
+		let p
+		let pricesMorePreviousList = pricesSecuritiesList.filter(
+			(price, index, baseArr) => index >0 && price > baseArr[index - 1]
+		)		
+		document.write(`3. Cписок цін, які більші за попереднє значення<br> ${pricesMorePreviousList}<br>`)
+		//4)Сформувати новий масив, що міститиме значення цін у відсотках стосовно максимального
+		let maxPrice = Math.max(...pricesSecuritiesList)
+		document.write(`4. Максимальна ціна = 100% = ${maxPrice}<br>`)
+		let percentageFromMaxPrice = pricesSecuritiesList.map(
+			(price) => Math.floor((price / maxPrice * 100))
+		)
+		document.write(`Значення цін у відсотках стосовно максимального <br>${percentageFromMaxPrice}<br>`)
+		//5)Підрахувати кількість змін цін
+		let numberOfPricesChanges = pricesSecuritiesList.reduce(
+			(prevPrice, price) =>(price !=prevPrice? prevPrice+1 : prevPrice), 0
+		)
+		document.write(`5. Кількість змін цін = ${numberOfPricesChanges}<br>`)			
+		//6)Визначити, чи є ціна, що менше 1000
+		document.write(`6. Визначити, чи є ціна, що менше 1000 <br>`)
+		if(pricesSecuritiesList.some((price) => price <1000))
+		document.write(`Yes<br>`)
+	   else
+		document.write(`No<br>`)
+	   //7)Визначати, чи усі ціни більше за 1000
+	   document.write(`7. Визначати, чи усі ціни більше за 1000<br>`)
+		if(pricesSecuritiesList.every((price) => price>1000))
+		document.write(`Yes<br>`)
+	   else
+		document.write(`No<br>`)
+	   //  8)Підрахувати кількість цін, що більше за 1000
+		let numberPricesMore1000 = pricesSecuritiesList.reduce(
+			(prevPrices, price) => (price > 1000 ? prevPrices+1 : prevPrices), 0
+		)
+		document.write(`8. Кількість цін, що більше за 1000 = ${numberPricesMore1000}<br>`)
+		//9)Підрахувати суму цін, що більше за 1000
+		let sumPricesMore1000 = pricesSecuritiesList.reduce(
+			(prevPrices, price) => (price > 1000 ? prevPrices + price : prevPrices), 0
+		)
+		document.write(`9. Сума цін, що більше за 1000 = ${sumPricesMore1000}<br>`)
+		//10)Знайти першу ціну, що більше за 1000
+		let firstPriceMore1000 = pricesSecuritiesList.find(
+			(price) => price > 1000
+		)
+		document.write(`10. Перша ціна, що більше за 1000 = ${firstPriceMore1000}<br>`)
+		//11)Знайти індекс першої ціни, що більше за 1000
+		let firstIndexOfPriceMore1000 = pricesSecuritiesList.findIndex(
+			(price, index, baseArr) => price > 1000
+		)
+		document.write(`11. Індекс першої ціни, що більше за 1000 = ${firstIndexOfPriceMore1000 +1}<br>`)
+		//12)Знайти останню ціну, що більше за 1000
+		let lastPriceMore1000 = pricesSecuritiesList.findLast(
+			(price) => price > 1000
+		)
+		document.write(`12. Остання ціна, що більше за 1000 = ${lastPriceMore1000}<br>`)
+		//13)Знайти індекс останньої ціни, що більше за 1000
+		let lastIndexOfPriceMore1000 = pricesSecuritiesList.findLastIndex(
+			(price, index, baseArr) => price > 1000
+		)
+		document.write(`13. Індекс останньої ціни, що більше за 1000 = ${lastIndexOfPriceMore1000 +1}<br>`)
+	</script>
+</body>
+</html>
